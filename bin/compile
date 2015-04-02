@@ -159,6 +159,8 @@ fi
   if [ $use_bower ]; then
     status "Installing bower dependencies"
     node_modules/.bin/bower install 2>&1 | indent
+    status "Updating bower dependencies"
+    node_modules/.bin/bower update 2>&1 | indent
   fi
 )
 
